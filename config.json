@@ -1,6 +1,6 @@
 {
   "send": {
-    "workers": 5,
+    "workers": 1,
     "maxLoopTx": 10000000,
     "minDelayTxSeconds": 10,
     "maxDelayTxSeconds": 100,
@@ -13,8 +13,8 @@
   "swap": {
     "enabled": true,
     "workers": 1000,
-    "minOrderSizeUsd": 1.05,
-    "maxOrderSizeUsd": 3,
+    "minOrderSizeUsd": 1.01,
+    "maxOrderSizeUsd": 5,
     "minDelaySeconds": 5,
     "maxDelaySeconds": 10,
     "maxLoopTakes": 100000,
@@ -23,17 +23,17 @@
       "usdc_cc"
     ],
     "maker": {
-      "minBps": 0,
-      "maxBps": 1,
+      "minBps": 6,
+      "maxBps": 9,
       "expiresHours": 6,
       "maxOpenOrders": 1,
       "rateLimitCooldownMinutes": 62,
       "balanceLockCooldownSeconds": 120,
       "takerIdleSecondsBeforeMaker": 10,
-      "cancelAfterIdleMinutes": 5
+      "cancelAfterIdleMinutes": 6
     },
     "taker": {
-      "minBps": 1,
+      "minBps": 3,
       "maxTakesPerCounterpartyPerWeek": 5,
       "balanceLockCooldownSeconds": 90,
       "orderBlacklistSeconds": 60,
@@ -43,9 +43,7 @@
   },
   "captcha": {
     "provider": "2captcha",
-    "solverUrl": [
-      ""
-    ],
+    "solverUrl": [""],
     "apiKey": ""
   },
   "safety": {
